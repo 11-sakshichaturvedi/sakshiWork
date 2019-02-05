@@ -1,0 +1,137 @@
+Table3:
+
+BOOKS REGISTRATION:
+      CREATE TABLE BOOKSREGISTRATION(registration_id varchar2(4) PRIMARY KEY,
+                                     book_id varchar2(4),
+                                     user_id varchar2(4),
+                                     registration_date date,
+				     FOREIGN KEY(book_id) REFERENCES BooksInventory(book_id),
+                                     FOREIGN KEY(user_id) REFERENCES USERS(user_id));
+
+SQL> desc booksregistration;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ REGISTRATION_ID                           NOT NULL VARCHAR2(4)
+ BOOK_ID                                            VARCHAR2(4)
+ USER_ID                                            VARCHAR2(4)
+ REGISTRATION_DATE                                  DATE
+
+INSERTING VALUES:
+SQL>  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date');
+Enter value for registration_id: 3001
+Enter value for book_id: 2001
+Enter value for user_id: 1001
+Enter value for registration_date: 12-Jan-2010
+old   1:  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date')
+new   1:  INSERT into booksregistration values('3001','2001','1001','12-Jan-2010')
+
+1 row created.
+
+SQL>  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date');
+Enter value for registration_id: 3002
+Enter value for book_id: 2002
+Enter value for user_id: 1002
+Enter value for registration_date: 12-Nov-2012
+old   1:  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date')
+new   1:  INSERT into booksregistration values('3002','2002','1002','12-Nov-2012')
+
+1 row created.
+
+SQL>  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date');
+Enter value for registration_id: 3003
+Enter value for book_id: 2003
+Enter value for user_id: 1003
+Enter value for registration_date: 14-Aug-2008
+old   1:  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date')
+new   1:  INSERT into booksregistration values('3003','2003','1003','14-Aug-2008')
+
+1 row created.
+
+SQL>  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date');
+Enter value for registration_id: 3004
+Enter value for book_id: 2004
+Enter value for user_id: 1004
+Enter value for registration_date: 30-Mar-2018
+old   1:  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date')
+new   1:  INSERT into booksregistration values('3004','2004','1004','30-Mar-2018')
+
+1 row created.
+
+SQL>  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date');
+Enter value for registration_id: 3005
+Enter value for book_id: 2005
+Enter value for user_id: 1005
+Enter value for registration_date: 26-Oct-2006
+old   1:  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date')
+new   1:  INSERT into booksregistration values('3005','2005','1005','26-Oct-2006')
+
+1 row created.
+
+SQL>  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date');
+Enter value for registration_id: 3006
+Enter value for book_id: 2006
+Enter value for user_id: 1006
+Enter value for registration_date: 16-Apr-2002
+old   1:  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date')
+new   1:  INSERT into booksregistration values('3006','2006','1006','16-Apr-2002')
+
+1 row created.
+
+SQL>  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date');
+Enter value for registration_id: 3007
+Enter value for book_id: 2007
+Enter value for user_id: 1007
+Enter value for registration_date: 24-Feb-2004
+old   1:  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date')
+new   1:  INSERT into booksregistration values('3007','2007','1007','24-Feb-2004')
+
+1 row created.
+
+SQL>  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date');
+Enter value for registration_id: 3008
+Enter value for book_id: 2008
+Enter value for user_id: 1008
+Enter value for registration_date: 18-Dec-2006
+old   1:  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date')
+new   1:  INSERT into booksregistration values('3008','2008','1008','18-Dec-2006')
+
+1 row created.
+
+SQL>  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date');
+Enter value for registration_id: 3009
+Enter value for book_id: 2009
+Enter value for user_id: 1009
+Enter value for registration_date: 18-Jun-2000
+old   1:  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date')
+new   1:  INSERT into booksregistration values('3009','2009','1009','18-Jun-2000')
+
+1 row created.
+
+SQL>  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date');
+Enter value for registration_id: 3010
+Enter value for book_id: 2010
+Enter value for user_id: 1010
+Enter value for registration_date: 20-Jul-2005
+old   1:  INSERT into booksregistration values('&registration_id','&book_id','&user_id','&registration_date')
+new   1:  INSERT into booksregistration values('3010','2010','1010','20-Jul-2005')
+
+1 row created.
+
+SQL> select *from Booksregistration;
+
+REGI BOOK USER REGISTRAT
+---- ---- ---- ---------
+3001 2001 1001 12-JAN-10
+3002 2002 1002 12-NOV-12
+3003 2003 1003 14-AUG-08
+3004 2004 1004 30-MAR-18
+3005 2005 1005 26-OCT-06
+3006 2006 1006 16-APR-02
+3007 2007 1007 24-FEB-04
+3008 2008 1008 18-DEC-06
+3009 2009 1009 18-JUN-00
+3010 2010 1010 20-JUL-05
+
+10 rows selected.
+
+SQL>

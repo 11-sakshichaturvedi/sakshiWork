@@ -1,0 +1,198 @@
+Table3:
+
+BOOKS INVENTORY:
+SQL>CREATE TABLE BOOKSINVENTORY(book_id varchar2(4) PRIMARY KEY,
+                                 book_name varchar2(20), 
+                                 author1 varchar2(15),
+                                 author2 varchar2(15),
+                                 publisher varchar2(20),
+                                 yearOfPublication varchar2(4));
+
+SQL> desc booksinventory;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BOOK_ID                                   NOT NULL VARCHAR2(4)
+ BOOK_NAME                                          VARCHAR2(20)
+ AUTHOR1                                            VARCHAR2(15)
+ AUTHOR2                                            VARCHAR2(15)
+ PUBLISHER                                          VARCHAR2(20)
+ YEAROFPUBLICATION                                  VARCHAR2(4)
+
+INSERTING VALUES:
+SQL>insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication');
+Enter value for book_id: 2001
+Enter value for book_name: CProgramming
+Enter value for author1: BalaGuruSwamy
+Enter value for author2: Dennis
+Enter value for publisher: Deepthi
+Enter value for yearofpublication: 1990
+old   1: insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication')
+new   1: insert into booksinventory values('2001','CProgramming','BalaGuruSwamy','Dennis','Deepthi','1990')
+
+1 row created.
+
+SQL> insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication');
+Enter value for book_id: 2002
+Enter value for book_name: Java
+Enter value for author1: Chetan
+Enter value for author2: James
+Enter value for publisher: Informa
+Enter value for yearofpublication: 1995
+old   1: insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication')
+new   1: insert into booksinventory values('2002','Java','Chetan','James ','Informa','1995')
+
+1 row created.
+
+SQL> insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication');
+Enter value for book_id: 2003
+Enter value for book_name: UML
+Enter value for author1: Bill Joy
+Enter value for author2: Ken Arnold
+Enter value for publisher: Holtzbrinck
+Enter value for yearofpublication: 1998
+old   1: insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication')
+new   1: insert into booksinventory values('2003','UML','Bill Joy','Ken Arnold','Holtzbrinck','1998')
+
+1 row created.
+
+SQL> insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication');
+Enter value for book_id: 2004
+Enter value for book_name: Microprocessor
+Enter value for author1: Gupta
+Enter value for author2: Rihan
+Enter value for publisher: Pearson
+Enter value for yearofpublication: 2000
+old   1: insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication')
+new   1: insert into booksinventory values('2004','Microprocessor','Gupta','Rihan','Pearson','2000')
+
+1 row created.
+
+SQL> insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication');
+Enter value for book_id: 2005
+Enter value for book_name: Thermodynamics
+Enter value for author1: Diwan
+Enter value for author2: Jacob
+Enter value for publisher: Wiley
+Enter value for yearofpublication: 2001
+old   1: insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication')
+new   1: insert into booksinventory values('2005','Thermodynamics','Diwan','Jacob','Wiley','2001')
+
+1 row created.
+
+
+SQL> insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication');
+Enter value for book_id: 2006
+Enter value for book_name: OOPs
+Enter value for author1: AlanKey
+Enter value for author2: Doannx
+Enter value for publisher: Informa
+Enter value for yearofpublication: 1996
+old   1: insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication')
+new   1: insert into booksinventory values('2006','OOPs','AlanKey','Doannx','Informa','1996')
+
+1 row created.
+
+SQL> insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication');
+Enter value for book_id: 2007
+Enter value for book_name: Mathematics
+Enter value for author1: Aryabatta
+Enter value for author2: Ramanujan
+Enter value for publisher: Deepthi
+Enter value for yearofpublication: 2001
+old   1: insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication')
+new   1: insert into booksinventory values('2007','Mathematics','Aryabatta','Ramanujan','Deepthi','2001')
+
+1 row created.
+
+SQL> insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication');
+Enter value for book_id: 2008
+Enter value for book_name: Oracle
+Enter value for author1: Donald Bales
+Enter value for author2: JonEllis
+Enter value for publisher: Addison Wesley
+Enter value for yearofpublication: 1992
+old   1: insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication')
+new   1: insert into booksinventory values('2008','Oracle','Donald Bales','JonEllis','Addison Wesley','1992')
+
+1 row created.
+
+SQL> insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication');
+Enter value for book_id: 2009
+Enter value for book_name: Two States
+Enter value for author1: Chetan Bhagat
+Enter value for author2:
+Enter value for publisher: Rupa Publications
+Enter value for yearofpublication: 2009
+old   1: insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication')
+new   1: insert into booksinventory values('2009','Two States','Chetan Bhagat','','Rupa Publications','2009')
+
+1 row created.
+
+SQL> insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication');
+Enter value for book_id: 2010
+Enter value for book_name: DSP
+Enter value for author1: DimitrisG
+Enter value for author2: JohnG.Proakis
+Enter value for publisher: Shueisha
+Enter value for yearofpublication: 1992
+old   1: insert into booksinventory values('&book_id','&book_name','&author1','&author2','&publisher','&yearofpublication')
+new   1: insert into booksinventory values('2010','DSP','DimitrisG','JohnG.Proakis','Shueisha','1992')
+
+1 row created.
+
+
+SQL> select * from booksinventory;
+
+BOOK BOOK_NAME            AUTHOR1         AUTHOR2         PUBLISHER
+---- -------------------- --------------- --------------- --------------------
+YEAR
+----
+2001 CProgramming         BalaGuruSwamy   Dennis          Deepthi
+1990
+
+2002 Java                 Chetan          James           Informa
+1995
+
+2003 UML                  Bill Joy        Ken Arnold      Holtzbrinck
+1998
+
+
+BOOK BOOK_NAME            AUTHOR1         AUTHOR2         PUBLISHER
+---- -------------------- --------------- --------------- --------------------
+YEAR
+----
+2004 Microprocessor       Gupta           Rihan           Pearson
+2000
+
+2005 Thermodynamics       Diwan           Jacob           Wiley
+2001
+
+2006 OOPs                 AlanKey         Doannx          Informa
+1996
+
+
+BOOK BOOK_NAME            AUTHOR1         AUTHOR2         PUBLISHER
+---- -------------------- --------------- --------------- --------------------
+YEAR
+----
+2007 Mathematics          Aryabatta       Ramanujan       Deepthi
+2001
+
+2008 Oracle               Donald Bales    JonEllis        Addison Wesley
+1992
+
+2009 Two States           Chetan Bhagat                   Rupa Publications
+2009
+
+
+BOOK BOOK_NAME            AUTHOR1         AUTHOR2         PUBLISHER
+---- -------------------- --------------- --------------- --------------------
+YEAR
+----
+2010 DSP                  DimitrisG       JohnG.Proakis   Shueisha
+1992
+
+
+10 rows selected.
+
+SQL>

@@ -1,0 +1,158 @@
+Table4-BOOKSTRANSACTION
+
+SQL>CREATE TABLE BOOKSTRANSACTION(transaction_id varchar2(4),
+                                     registration_id varchar2(4),
+                                     issue_date date,
+                                     return_date date,
+                                     actualreturn_date date,Fine Number(3),
+				     FOREIGN KEY(registration_id) references booksregistration(registration_id));
+
+SQL> desc bookstransaction;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ TRANSACTION_ID                                     VARCHAR2(4)
+ REGISTRATION_ID                                    VARCHAR2(4)
+ ISSUE_DATE                                         DATE
+ RETURN_DATE                                        DATE
+ ACTUALRETURN_DATE                                  DATE
+ FINE                                               NUMBER(3)
+
+INSERTING VALUES:
+SQL> insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine');
+Enter value for transaction_id: 4001
+Enter value for registration_id: 3001
+Enter value for issue_date: 12-Jan-2010
+Enter value for return_date: 24-Jan-2010
+Enter value for actualreturn_date:
+Enter value for fine:
+old   1: insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine')
+new   1: insert into bookstransaction values('4001','3001','12-Jan-2010','24-Jan-2010','','')
+
+1 row created.
+
+SQL> insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine');
+Enter value for transaction_id: 4002
+Enter value for registration_id: 3002
+Enter value for issue_date: 14-Dec-2016
+Enter value for return_date: 28-Dec-2016
+Enter value for actualreturn_date:
+Enter value for fine:
+old   1: insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine')
+new   1: insert into bookstransaction values('4002','3002','14-Dec-2016','28-Dec-2016','','')
+
+1 row created.
+
+SQL> insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine');
+Enter value for transaction_id: 4003
+Enter value for registration_id: 3003
+Enter value for issue_date: 02-Feb-2002
+Enter value for return_date: 16-Feb-2002
+Enter value for actualreturn_date:
+Enter value for fine:
+old   1: insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine')
+new   1: insert into bookstransaction values('4003','3003','02-Feb-2002','16-Feb-2002','','')
+
+1 row created.
+
+SQL> insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine');
+Enter value for transaction_id: 4004
+Enter value for registration_id: 3004
+Enter value for issue_date: 16-Mar-2004
+Enter value for return_date: 30-Mar-2004
+Enter value for actualreturn_date:
+Enter value for fine:
+old   1: insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine')
+new   1: insert into bookstransaction values('4004','3004','16-Mar-2004','30-Mar-2004','','')
+
+1 row created.
+
+SQL> insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine');
+Enter value for transaction_id: 4005
+Enter value for registration_id: 3005
+Enter value for issue_date: 04-Apr-2004
+Enter value for return_date: 18-Apr-2004
+Enter value for actualreturn_date:
+Enter value for fine:
+old   1: insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine')
+new   1: insert into bookstransaction values('4005','3005','04-Apr-2004','18-Apr-2004','','')
+
+1 row created.
+
+SQL> insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine');
+Enter value for transaction_id: 4006
+Enter value for registration_id: 3006
+Enter value for issue_date: 02-Jul-2008
+Enter value for return_date: 16-Jul-2008
+Enter value for actualreturn_date:
+Enter value for fine:
+old   1: insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine')
+new   1: insert into bookstransaction values('4006','3006','02-Jul-2008','16-Jul-2008','','')
+
+1 row created.
+
+SQL> insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine');
+Enter value for transaction_id: 4007
+Enter value for registration_id: 3007
+Enter value for issue_date: 01-May-2003
+Enter value for return_date: 15-May-2003
+Enter value for actualreturn_date:
+Enter value for fine:
+old   1: insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine')
+new   1: insert into bookstransaction values('4007','3007','01-May-2003','15-May-2003','','')
+
+1 row created.
+
+SQL> insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine');
+Enter value for transaction_id: 4008
+Enter value for registration_id: 3008
+Enter value for issue_date: 25-Dec-2002
+Enter value for return_date: 08-Jan-2003
+Enter value for actualreturn_date:
+Enter value for fine:
+old   1: insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine')
+new   1: insert into bookstransaction values('4008','3008','25-Dec-2002','08-Jan-2003','','')
+
+1 row created.
+
+SQL> insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine');
+Enter value for transaction_id: 4009
+Enter value for registration_id: 3009
+Enter value for issue_date: 20-Aug-2004
+Enter value for return_date: 04-Sep-2004
+Enter value for actualreturn_date:
+Enter value for fine:
+old   1: insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine')
+new   1: insert into bookstransaction values('4009','3009','20-Aug-2004','04-Sep-2004','','')
+
+1 row created.
+
+SQL> insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine');
+Enter value for transaction_id: 4010
+Enter value for registration_id: 3010
+Enter value for issue_date: 01-Oct-2001
+Enter value for return_date: 15-Oct-2001
+Enter value for actualreturn_date:
+Enter value for fine:
+old   1: insert into bookstransaction values('&transaction_id','&registration_id','&issue_date','&return_date','&actualreturn_date','&fine')
+new   1: insert into bookstransaction values('4010','3010','01-Oct-2001','15-Oct-2001','','')
+
+1 row created.
+
+SQL> select *from bookstransaction;
+
+TRAN REGI ISSUE_DAT RETURN_DA ACTUALRET       FINE
+---- ---- --------- --------- --------- ----------
+4001 3001 12-JAN-10 24-JAN-10
+4002 3002 14-DEC-16 28-DEC-16
+4003 3003 02-FEB-02 16-FEB-02
+4004 3004 16-MAR-04 30-MAR-04
+4005 3005 04-APR-04 18-APR-04
+4006 3006 02-JUL-08 16-JUL-08
+4007 3007 01-MAY-03 15-MAY-03
+4008 3008 25-DEC-02 08-JAN-03
+4009 3009 20-AUG-04 04-SEP-04
+4010 3010 01-OCT-01 15-OCT-01
+
+10 rows selected.
+
+SQL>

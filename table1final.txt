@@ -1,0 +1,183 @@
+
+SQL*Plus: Release 11.2.0.2.0 Production on Sat Jan 19 10:21:35 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+SQL> connect
+Enter user-name: system
+Enter password:
+Connected.
+SQL>  CREATE  TABLE  USERS(User_id varchar(6) PRIMARY KEY,user_name varchar(15),password varchar(7),email_id varchar(25) UNIQUE, Librarian varchar(1) check(librarian in('Y','N')));
+
+Table created.
+
+SQL> desc users;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USER_ID                                   NOT NULL VARCHAR2(6)
+ USER_NAME                                          VARCHAR2(15)
+ PASSWORD                                           VARCHAR2(7)
+ EMAIL_ID                                           VARCHAR2(25)
+ LIBRARIAN                                          VARCHAR2(1)
+
+SQL> CREATE TABLE BOOKSINVENTORY(book_id varchar2(4) PRIMARY KEY,book_name varchar2(20),author1 varchar2(15),author2 varchar2(15),publisher varchar2(20),yearOfPublication varchar2(4));
+
+Table created.
+
+SQL> desc booksinventory;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BOOK_ID                                   NOT NULL VARCHAR2(4)
+ BOOK_NAME                                          VARCHAR2(20)
+ AUTHOR1                                            VARCHAR2(15)
+ AUTHOR2                                            VARCHAR2(15)
+ PUBLISHER                                          VARCHAR2(20)
+ YEAROFPUBLICATION                                  VARCHAR2(4)
+
+SQL>  create table books_Registration(registration_id varchar2(4),book_id varchar2(4),
+  2  user_id varchar2(4),registration_date date,PRIMARY KEY(REGISTRATION_ID), FOREIGN KEY(BOOK_ID) references BooksInventory(book_id),
+  3   FOREIGN KEY(USER_ID) references USERS(user_id));
+
+Table created.
+
+SQL> CREATE TABLE BOOKSTRANSACTION(transaction_id varchar2(4), registration_id varchar2(4) ,issue_date date, return_date date, actualreturn_date date,
+  2  FOREIGN KEY(REGISTRATION_ID) references books_registration(registration_id));
+
+Table created.
+
+
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1001
+Enter value for user_name: sakshi
+Enter value for password: abc123
+Enter value for email_id: s@gmail.com
+Enter value for librarian: N
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1001,'sakshi','abc123','s@gmail.com','N')
+
+1 row created.
+
+SQL>
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+  2  ;
+Enter value for user_id: 1002
+Enter value for user_name: chandrika
+Enter value for password: 54fd
+Enter value for email_id: c@gmail.com
+Enter value for librarian: Y
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1002,'chandrika','54fd','c@gmail.com','Y')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1003
+Enter value for user_name: triveni
+Enter value for password: jhwu65
+Enter value for email_id: t@gmail.com
+Enter value for librarian: N
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1003,'triveni','jhwu65','t@gmail.com','N')
+
+1 row created.
+
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1004
+Enter value for user_name: harini
+Enter value for password: t678
+Enter value for email_id: h@gmail.com
+Enter value for librarian: N
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1004,'harini','t678','h@gmail.com','N')
+
+1 row created.
+
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+  2  ;
+Enter value for user_id: 1005
+Enter value for user_name: chitra
+Enter value for password: t56t
+Enter value for email_id: ch@gmail.com
+Enter value for librarian: Y
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1005,'chitra','t56t','ch@gmail.com','Y')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1006
+Enter value for user_name: niteesha
+Enter value for password: 76ty
+Enter value for email_id: n@gmail.com
+Enter value for librarian: N
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1006,'niteesha','76ty','n@gmail.com','N')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1007
+Enter value for user_name: pooja
+Enter value for password: yt789
+Enter value for email_id: p@gmail.com
+Enter value for librarian: N
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1007,'pooja','yt789','p@gmail.com','N')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1008
+Enter value for user_name: rama
+Enter value for password: 6587
+Enter value for email_id: r@gmail.com
+Enter value for librarian: Y
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1008,'rama','6587','r@gmail.com','Y')
+
+1 row created.
+
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1009
+Enter value for user_name: manasa
+Enter value for password: yt6u
+Enter value for email_id: m@gmail.com
+Enter value for librarian: N
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1009,'manasa','yt6u','m@gmail.com','N')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1010
+Enter value for user_name: priya
+Enter value for password: tf5
+Enter value for email_id: priya@gmail.com
+Enter value for librarian: Y
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1010,'priya','tf5','priya@gmail.com','Y')
+
+1 row created.
+
+SQL> select * from users;
+
+USER_I USER_NAME       PASSWOR EMAIL_ID                  L
+------ --------------- ------- ------------------------- -
+1001   sakshi          abc123  s@gmail.com               N
+1002   chandrika       54fd    c@gmail.com               Y
+1003   triveni         jhwu65  t@gmail.com               N
+1004   harini          t678    h@gmail.com               N
+1005   chitra          t56t    ch@gmail.com              Y
+1006   niteesha        76ty    n@gmail.com               N
+1007   pooja           yt789   p@gmail.com               N
+1008   rama            6587    r@gmail.com               Y
+1009   manasa          yt6u    m@gmail.com               N
+1010   priya           tf5     priya@gmail.com           Y
+
+10 rows selected.
+
+SQL>

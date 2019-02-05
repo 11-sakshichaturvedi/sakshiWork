@@ -1,0 +1,147 @@
+Table 1:
+USERS:
+     CREATE TABLE USERS(User_id varchar(6) PRIMARY KEY,
+                    user_name varchar(15),
+                    password varchar(7),
+                    email_id varchar(25) UNIQUE, 
+                    Librarian varchar(1) check(librarian in('Y','N')));
+
+
+SQL>desc users;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USER_ID                                   NOT NULL VARCHAR2(6)
+ USER_NAME                                          VARCHAR2(15)
+ PASSWORD                                           VARCHAR2(7)
+ EMAIL_ID                                           VARCHAR2(25)
+ LIBRARIAN                                          VARCHAR2(1)
+
+INSERTING VALUES:
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1001
+Enter value for user_name: Sakshi
+Enter value for password: abc123
+Enter value for email_id: a@gmail.com
+Enter value for librarian: Y
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1001,'Sakshi','abc123','a@gmail.com','Y')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1002
+Enter value for user_name: Chitra
+Enter value for password: cde456
+Enter value for email_id: jaya@gmail.com
+Enter value for librarian: N
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1002,'Chitra','cde456','jaya@gmail.com','N')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1003
+Enter value for user_name: Harini
+Enter value for password: har234
+Enter value for email_id: h@gmail.com
+Enter value for librarian: Y
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1003,'Harini','har234','h@gmail.com','Y')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1004
+Enter value for user_name: Chandrika
+Enter value for password: chan345
+Enter value for email_id: c@gmail.com
+Enter value for librarian: N
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1004,'Chandrika','chan345','c@gmail.com','N')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1005
+Enter value for user_name: Triveni
+Enter value for password: tri789
+Enter value for email_id: tri@gmail.com
+Enter value for librarian: Y
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1005,'Triveni','tri789','tri@gmail.com','Y')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1006
+Enter value for user_name: Niteesha
+Enter value for password: ni567
+Enter value for email_id: n@gmail.com
+Enter value for librarian: Y
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1006,'Niteesha','ni567','n@gmail.com','Y')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1007
+Enter value for user_name: Soundarys
+Enter value for password: soun678
+Enter value for email_id: s@gmail.com
+Enter value for librarian: N
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1007,'Soundarys','soun678','s@gmail.com','N')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1008
+Enter value for user_name: Manasa
+Enter value for password: man567
+Enter value for email_id: m@gmail.com
+Enter value for librarian: Y
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1008,'Manasa','man567','m@gmail.com','Y')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1009
+Enter value for user_name: Aditi
+Enter value for password: adi7890
+Enter value for email_id: adi@gmail.com
+Enter value for librarian: Y
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1009,'Aditi','adi7890','adi@gmail.com','Y')
+
+1 row created.
+
+SQL> insert into users values(&user_id,'&user_name','&password','&email_id','&librarian');
+Enter value for user_id: 1010
+Enter value for user_name: Raama
+Enter value for password: ran8989
+Enter value for email_id: Ra@gmail.com
+Enter value for librarian: N
+old   1: insert into users values(&user_id,'&user_name','&password','&email_id','&librarian')
+new   1: insert into users values(1010,'Raama','ran8989','Ra@gmail.com','N')
+
+1 row created.
+
+SQL> select*from Users;
+
+USER_I USER_NAME       PASSWOR EMAIL_ID                  L
+------ --------------- ------- ------------------------- -
+1001   Sakshi          abc123  a@gmail.com               Y
+1002   Chitra          cde456  jaya@gmail.com            N
+1003   Harini          har234  h@gmail.com               Y
+1004   Chandrika       chan345 c@gmail.com               N
+1005   Triveni         tri789  tri@gmail.com             Y
+1006   Niteesha        ni567   n@gmail.com               Y
+1007   Soundarys       soun678 s@gmail.com               N
+1008   Manasa          man567  m@gmail.com               Y
+1009   Aditi           adi7890 adi@gmail.com             Y
+1010   Raama           ran8989 Ra@gmail.com              N
+
+10 rows selected.
+
+SQL>
