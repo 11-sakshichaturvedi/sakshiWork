@@ -1,0 +1,5 @@
+create table trainee_details(id varchar2(4),name varchar2(10),location varchar2(10),domain varchar2(10));
+
+create table user_login(username varchar2(10),password varchar2(10));
+
+insert into user_login values(admin,admin);
