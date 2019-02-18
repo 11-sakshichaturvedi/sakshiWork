@@ -1,0 +1,33 @@
+
+<table>
+    <tr>
+        <td>
+            student id
+        </td>
+        <td><input type="text" [(ngModel)]="stdId"/></td>
+    </tr>
+    <tr>
+        <td>student name</td>
+        <td><input type="text" [(ngModel)]="name"/></td>
+    </tr>
+    <tr>
+        <td>student qualification</td>
+        <td><input type="text" [(ngModel)]="qual"/></td>
+    </tr>
+    <tr>
+        <td><button (click)="add()">Add student</button></td>
+        
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <th>student id</th>
+        <th>student name</th>
+        <th>qualification</th>
+    </tr>
+    <tr *ngFor="let temp of myalldata">
+<td>{{temp.stdId}}</td>
+       <td>{{temp.name}}</td> 
+       <td>{{temp.qualification}}</td>
+    </tr>
+</table>

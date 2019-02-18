@@ -1,0 +1,44 @@
+<table>
+    <tr>
+        <td>
+            mobile id
+        </td>
+        <td><input type="text" [(ngModel)]="mobileId"/></td>
+    </tr>
+    <tr>
+        <td>mobile name</td>
+        <td><input type="text" [(ngModel)]="mobileName"/></td>
+    </tr>
+    <tr>
+        <td>mobile cost</td>
+        <td><input type="text" [(ngModel)]="mobileCost"/></td>
+    </tr>
+    <tr>
+        <td>mobile type</td>
+        <td><input type="text" [(ngModel)]="mobiletype"/></td>
+    </tr>
+
+    <tr>
+        <td><button (click)="add()">Add mobile</button></td>
+        
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <th>mobile id</th>
+        <th>mobile name</th>
+        <th>mobile cost</th>
+        <th>mobile type</th>
+    </tr>
+    <tr *ngFor="let temp of myalldata">
+<td>{{temp.mobId}}</td>
+       <td>{{temp.name}}</td> 
+       <td>{{temp.cost}}</td>
+       <td>{{temp.type}}</td>
+    </tr>
+</table>
+
+
+
+<b-app></b-app>
+<sm-app></sm-app>
