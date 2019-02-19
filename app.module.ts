@@ -2,14 +2,12 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }  from './app.component';
 
-
+import{EmployeeComponent} from './app.employeecomponent';
 import {FormsModule} from '@angular/forms';
-import { MobileComponent } from './app.mobilecomponent';
-import { BasicComponent } from './app.basiccomponent';
-import { SmartComponent } from './app.smartcomponent';
+import { HttpModule } from '@angular/http';
 @NgModule({
-  imports:      [ BrowserModule,FormsModule ],
-  declarations: [ AppComponent,MobileComponent,BasicComponent,SmartComponent ],
+  imports:      [ BrowserModule,FormsModule ,HttpModule],
+  declarations: [ AppComponent,EmployeeComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

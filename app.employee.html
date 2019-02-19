@@ -1,0 +1,19 @@
+
+
+<h2>Show all Employee</h2>
+<table border="1">
+    <tr>
+        <th> id</th>
+        <th> name</th>
+        <th>salary</th>
+        <th>department</th>
+       
+    </tr>
+    <tr *ngFor="let temp of myalldata">
+<td>{{temp.id}}</td>
+       <td>{{temp.name}}</td> 
+       <td>{{temp.sal}}</td>
+       <td>{{temp.dept}}</td>
+       
+    </tr>
+</table>

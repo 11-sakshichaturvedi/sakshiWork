@@ -1,0 +1,20 @@
+[
+    {
+        "id":1001,
+        "name":"sakshi",
+        "sal":65768,
+        "dept":"IT"
+    },
+    {
+        "id":1002,
+        "name":"sakshi",
+        "sal":65768,
+        "dept":"IT"
+    },
+    {
+    "id":1003,
+    "name":"sakshi",
+    "sal":65768,
+    "dept":"IT"
+    }
+  ]
