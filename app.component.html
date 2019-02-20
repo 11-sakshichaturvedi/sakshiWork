@@ -1,4 +1,16 @@
-<h2>Angular 2 operation
-</h2>
-<h1>Add Employee</h1>
-<emp-comp></emp-comp>
+Search Data by Name<input [value]='search' (input)='search=$event.target.value' />
+
+<table border="1">
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Salary</td>
+    </tr>
+ 
+    <tr  *ngFor="let c of myalldata|searchPipe :search">
+   <td> {{c.id}}</td>
+   <td>{{c.name}}</td>
+   <td> {{c.Salary}}</td>
+  </tr>
+</table>
+
