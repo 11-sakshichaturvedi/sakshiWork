@@ -1,16 +1,6 @@
-Search Data by Name<input [value]='search' (input)='search=$event.target.value' />
-
-<table border="1">
-  <tr>
-    <td>ID</td>
-    <td>Name</td>
-    <td>Salary</td>
-    </tr>
- 
-    <tr  *ngFor="let c of myalldata|searchPipe :search">
-   <td> {{c.id}}</td>
-   <td>{{c.name}}</td>
-   <td> {{c.Salary}}</td>
-  </tr>
-</table>
-
+<nav>
+    <a [routerLink]="['add/capgemini']">add Books</a>
+    <a [routerLink]="['show']">show Books</a>
+    <a [routerLink]="['delete']">deleteBooks</a>
+</nav>
+<router-outlet></router-outlet>

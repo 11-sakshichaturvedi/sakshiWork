@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>ADD Book</h3>
+<form #bookForm=ngForm (ngSubmit)="getData(bookForm)">
+<table>
+<tr>
+<td>Book ID</td>
+<td><input required id="bookId" name="id" [(ngModel)]='model.bookId' type="text" #idcontrol="ngModel"/></td>
+<span  *ngIf="idcontrol.invalid && idcontrol.touched" > ID is required</span>
+</tr>
+
+
+
+<tr>
+<td>Book Name</td>
+<td><input required id="bookName" name="name" [(ngModel)]='model.bookName' type="text" #namecontrol="ngModel" /></td>
+<span  *ngIf="namecontrol.invalid && namecontrol.touched" > Book name is required</span>
+</tr>
+<tr>
+<td>Author1 Name</td>
+<td><input required id="author1" name="author1" [(ngModel)]='model.author1' type="text" #authorcontrol="ngModel"/></td>
+<span  *ngIf="authorcontrol.invalid && namecontrol.touched" > author name is required</span>
+</tr>
+
+<tr>
+<td>Author 2  Name</td>
+<td><input [(ngModel)]='model.author2' /></td>
+</tr>
+<tr>
+    <td>Publisher Name</td>
+    <td><input required id="pname" name="pname" [(ngModel)]='model.publisherName' type="text" #publishercontrol="ngModel"/></td>
+    <span  *ngIf="publishercontrol.invalid && publishercontrol.touched" > publisher name is required</span>
+    </tr>
+    <tr>
+        <td>Year Of Publication</td>
+        <td><input required id="year" name="year" [(ngModel)]='model.yearOfPublication' type="date" #datecontrol="ngModel"/></td>
+        <span  *ngIf="datecontrol.invalid && datecontrol.touched" > date is required</span>
+    </tr>
+        <tr>
+            <td>Availability of Book</td>
+            <td><input id="avail" name="avail" [(ngModel)]='model.availability' type="radio" value="A"/>Available
+                <td><input id="avail" name="avail" [(ngModel)]='model.availability' type="radio" value="NA"/>NotAvailable
+
+            </td>
+            </tr>
+
+            
+            
+<tr>
+<td><button (click)="addData()" [disabled]="bookForm.invalid">Add Books</button></td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>
+

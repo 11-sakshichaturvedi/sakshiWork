@@ -1,0 +1,19 @@
+in show component
+<table border="1">
+    <tr>
+        <td>Id
+        </td>
+        <td>Name
+        </td>
+        <td>salary
+        </td>
+        <td>action
+        </td>
+    </tr>
+    <tr *ngFor="let data of mydata">
+<td>{{data.id}}</td>
+<td>{{data.name}}</td>
+<td>{{data.salary}}</td>
+<td><a [routerLink]="['/add',data.salary+data.salary*(10/100)]">increase the salary</a></td>
+    </tr>
+</table>
