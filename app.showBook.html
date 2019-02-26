@@ -1,19 +1,42 @@
-in show component
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
 <table border="1">
-    <tr>
-        <td>Id
-        </td>
-        <td>Name
-        </td>
-        <td>salary
-        </td>
-        <td>action
-        </td>
-    </tr>
-    <tr *ngFor="let data of mydata">
-<td>{{data.id}}</td>
-<td>{{data.name}}</td>
-<td>{{data.salary}}</td>
-<td><a [routerLink]="['/add',data.salary+data.salary*(10/100)]">increase the salary</a></td>
-    </tr>
+<tr>
+<th>Book ID</th>
+<th>Book name</th>
+<th>Author1 </th>
+<th> Author2</th>
+<th>Publisher</th>
+<th>Year Of publication</th>
+<th>Availability</th>
+</tr>
+<tr>
+
+<tr *ngFor="let book of book">
+<td>{{book.bookId}}</td>
+<td>{{book.bookName}}</td>
+<td>{{book.author1}}</td>
+<td>{{book.author2}}</td>
+<td>{{book.publisher}}</td>
+<td>{{book.yearofpublication}}</td>
+<td>{{book.availability}}</td>
+</tr>
+<tr *ngIf="!book">
+<td colspan="4">{{statusmessage}}</td>
+</tr>
+<tr *ngIf="book && book.length==0">
+<td>No Books to display</td>>
+</tr>
 </table>
+
+
+
+
+</body>
+</html>
